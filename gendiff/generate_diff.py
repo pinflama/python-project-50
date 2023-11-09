@@ -1,9 +1,9 @@
 """Generating the difference between two files."""
 
 
-from hexlet_code.tools.parse_file import get_dict_from_file
-from hexlet_code.tools.diff import diff
-from hexlet_code.formatters.format_diff import format_diff
+from gendiff.tools.parse_file import get_dict_from_file
+from gendiff.tools.diff import diff
+from gendiff.formatters.format_diff import format_diff
 
 
 def generate_diff(path_file1, path_file2, format_name='stylish'):

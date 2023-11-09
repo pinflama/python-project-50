@@ -1,7 +1,7 @@
 """Parsing the file"""
 
 import json
-import yaml
+# import yaml
 from pathlib import Path
 
 
@@ -15,6 +15,7 @@ def open_file(path_file, file_extension):
     if file_extension.lower() == '.json':
         with open(path_file) as f:
             return json.load(f)
-    elif file_extension.lower() == '.yml' or file_extension.lower() == '.yaml':
-        with open(path_file) as f:
-            return yaml.safe_load(f)
+    
+  # elif file_extension.lower() == '.yml' or file_extension.lower() == '.yaml':
+  #      with open(path_file) as f:
+  #          return yaml.safe_load(f)

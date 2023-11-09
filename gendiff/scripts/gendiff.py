@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-from hexlet_code.generate_diff import generate_diff
-from hexlet_code.tools.argparse import parser_arg
+from gendiff.generate_diff import generate_diff
+from gendiff.tools.argparse import parser_arg
 
 
 def main():
