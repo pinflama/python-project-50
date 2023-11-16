@@ -1,17 +1,25 @@
-lint:
-	poetry run flake8 gendiff
-
 install:
 	poetry install
 
-gendiff:
-	poetry run gendiff
-	
 test:
 	poetry run pytest
 
-build:
+test-coverage:
+	poetry run pytest --cov=gendiff --cov-report xml
+
+lint:
+	poetry run flake8 gendiff
+
+selfcheck:
+	poetry check
+
+check: selfcheck test lint
+
+build: check
 	poetry build
+
+gendiff:
+	poetry run gendiff
 
 publish:
 	poetry publish --dry-run
@@ -21,3 +29,5 @@ package-install:
 
 package-force-reinstall:
 	python3 -m pip install --user --force-reinstall dist/*.whl
+
+.PHONY: install test lint selfcheck check build
