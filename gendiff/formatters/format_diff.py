@@ -10,5 +10,7 @@ def format_diff(list_diff, format_name):
     elif format_name == 'plain':
         return plain(list_diff)
     elif format_name == 'json':
+        print("before format_json")
+        print(list_diff)
         return format_json(list_diff)
     raise 'Format not found!'
